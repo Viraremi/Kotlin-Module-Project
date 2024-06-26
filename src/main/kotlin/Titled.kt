@@ -1,3 +1,3 @@
-interface HasTitle {
+interface Titled {
     val title: String
 }

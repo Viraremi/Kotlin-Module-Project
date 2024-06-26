@@ -58,7 +58,7 @@ class AppLogic (){
         println("Заметка:\n" +
                 "\"${note.title}\"\n\n" +
                 "${note.text}\n\n" +
-                "Чтобы вернуться к предыдущему экрану, нажмите любую кнопку")
+                "Чтобы вернуться к предыдущему экрану, нажмите Enter")
         scanner.nextLine()
     }
 
@@ -96,7 +96,7 @@ class AppLogic (){
         }
     }
 
-    private fun <T : HasTitle> showChoiceMenu(list: MutableList<T>){
+    private fun <T : Titled> showChoiceMenu(list: MutableList<T>){
         println("1. Создать")
         println("2. Закрыть меню")
         for ((index, elem) in list.withIndex()){
